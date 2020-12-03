@@ -1,0 +1,65 @@
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #b9b9b9;
+  background-color: #e3e3e3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(0, 115, 188);
+  flex-wrap: wrap;
+  min-height: 4rem;
+
+}
+
+nav #logo {
+    max-height: 4rem;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+nav ul li {
+    padding:0em 1em;
+    font-size: 1em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(231, 201, 81);
+
+}
+
+nav ul li a:hover{
+    color:rgb(255, 92, 56);
+}
+
+.text {
+    font-family: "Odin", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
