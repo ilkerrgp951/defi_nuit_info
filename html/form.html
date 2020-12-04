@@ -10,9 +10,11 @@
 
             <img id="logo" src="../img/SURFRIDER.png" alt="Logo"/>
             <ul>
-                <li class="text"><a href="#">Table</a></li>
-                <li class="text"><a href="#">Test</a></li>
-                <li class="text"><a href="#">Pout</a></li>
+                <li class="text"><a href="#">Accueil</a></li>
+                <li class="text"><a href="#">Spots Nord</a></li>
+                <li class="text"><a href="#">Spots Sud</a></li>
+				<li class="text"><a href="#">Spots Ouest</a></li>
+                <li class="text"><a href="#">Formulaire</a></li>
                 
             </ul>
 
@@ -22,38 +24,12 @@
         <div class="container">
             <form method="post" action="traitement.php" required>
             <div class="row">
-                <h4>Account</h4>
+                <h4>Identification</h4>
                 <div class="input-group input-group-icon">
-                <input type="text" placeholder="Full Name"/>
+                <input type="nom" placeholder="Nom"/>
                 <div class="input-icon"><i class="fa fa-user"></i></div>
-                </div>
-
-                <div class="input-group input-group-icon">
-                    <input type="email" placeholder="Email Adress"/>
-                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
-                </div>
-                
-                <div class="input-group input-group-icon">
-                    <input type="email" placeholder="Email Adress"/>
-                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
-                </div>
-                <div class="input-group input-group-icon">
-                    <input type="email" placeholder="Email Adress"/>
-                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
-                </div>
-                <div class="input-group input-group-icon">
-                    <input type="email" placeholder="Email Adress"/>
-                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
-                </div>
-
-                <div class="input-group input-group-icon">
-                <input type="password" placeholder="Password"/>
-                <div class="input-icon"><i class="fa fa-key"></i></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-half">
-                <h4>Date of Birth</h4>
+				
+				<h4>Date</h4>
                 <div class="input-group">
                     <div class="col-third">
                     <input type="text" placeholder="DD"/>
@@ -65,55 +41,139 @@
                     <input type="text" placeholder="YYYY"/>
                     </div>
                 </div>
-                </div>
-                <div class="col-half">
-                <h4>Gender</h4>
+				
+				<h4>Heure de début d'activité</h4>
                 <div class="input-group">
-                    <input type="radio" name="gender" value="male" id="gender-male"/>
-                    <label for="gender-male">Male</label>
-                    <input type="radio" name="gender" value="female" id="gender-female"/>
-                    <label for="gender-female">Female</label>
+                    <div class="col-third">
+                    <input type="time" placeholder="Heure"
+					min="00:01" max="23:59" required> <br><br>
+                    </div>
+              
                 </div>
+				
+				<h4>Heure de fin d'activité</h4>
+                <div class="input-group">
+                    <div class="col-third">
+                    <input type="time" placeholder="Heure"
+					min="00:01" max="23:59" required> <br><br>
+                    </div>
+              
                 </div>
+				
+			
+                <h4>Région fréquenté</h4>
+                 <div class="input-group">
+                    <label for="regionn" ></label>
+							<select name="region" id="region">
+								<option value=""></option>
+								<option value="Nord">Nord</option>
+								<option value="Sud">Sud</option>
+								<option value="Ouest">Ouest</option>
+							</select><br><br>
+                </div>
+            
+				
+                <div class="input-group input-group-icon">
+                    <input type="Ville :" placeholder="Ville"/>
+                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                </div>
+                
+         
+				
+                <div class="input-group input-group-icon">
+                    <input type="Nom du Spot" placeholder="Nom du Spot"/>
+                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                </div>
+                
             </div>
             <div class="row">
-                <h4>Payment Details</h4>
-                <div class="input-group">
-                <input type="radio" name="payment-method" value="card" id="payment-method-card" checked="true"/>
-                <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
-                <input type="radio" name="payment-method" value="paypal" id="payment-method-paypal"/>
-                <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
-                </div>
-                <div class="input-group input-group-icon">
-                <input type="text" placeholder="Card Number"/>
-                <div class="input-icon"><i class="fa fa-credit-card"></i></div>
-                </div>
                 <div class="col-half">
-                <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Card CVC"/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
-                </div>
-                </div>
-                <div class="col-half">
+                <h4>Fréquentation des spots</h4>
+				
                 <div class="input-group">
-                    <select>
-                    <option>01 Jan</option>
-                    <option>02 Jan</option>
-                    </select>
-                    <select>
-                    <option>2015</option>
-                    <option>2016</option>
-                    </select>
+                    <label for="baigneur"><h5>Nombre de baigneurs rencontrés : </h5></label>
+							<select name="baigneur" id="baigneur">
+								<option value=""></option>
+								<option value="0-10">0-10</option>
+								<option value="11-20">11-20</option>
+								<option value="+20">+20</option>
+							</select><br><br>
                 </div>
                 </div>
+                
             </div>
+			<div class="row">
+			<div class="col-half">
+                
+					<div class="input-group">
+					  <label for="Bateau"><h5>Nombre de bateaux rencontrés : </h5> </label>
+								<select name="bateau" id="bateau">
+									<option value=""></option>
+									<option value="0-10">0-10</option>
+									<option value="11-20">11-20</option>
+									<option value="+20">+20</option>
+								</select><br><br>
+					</div>
+					</div>
+                </div>
+				
+			<div class="row">
+			<div class="col-half">
+                
+					<div class="input-group">
+					  <label for="pracAquat"><h5>Nombre de pratiquants de sports aquatiques rencontrés : </h5></label>
+							<select name="pracAquat" id="pracAquat">
+								<option value=""></option>
+								<option value="0-10">0-10</option>
+								<option value="11-20">11-20</option>
+								<option value="+20">+20</option>
+							</select><br><br>
+					</div>
+					</div>
+                </div>		
             <div class="row">
-                <h4>Terms and Conditions</h4>
-                <div class="input-group">
-                <input type="checkbox" id="terms"/>
-                <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+                <h4>Le surfeur</h4>
+				<h5>Produit utilisé dans la journée : </h5>
+				<div class="row">
+					<div class="input-group">
+					<input type="checkbox" id="Crème solaire"/>
+					<label for="Crème solaire">Crème solaire</label>
+				    <input type="checkbox" id="Parfum / Déodorant"/>
+					<label for="Parfum / Déodorant">Parfum / Déodorant</label>
+					<input type="checkbox" id="Crème hydratante"/>
+					<label for="Crème hydratante">Crème hydratante</label>
+					<input type="checkbox" id="Maquillage"/>
+					<label for="Maquillage">Maquillage</label>
+					<input type="checkbox" id="Essence"/>
+					<label for="Essence">Essence</label>
+					<input type="checkbox" id="Cigarette"/>
+					<label for="Cigarette">Cigarette</label>
+					<input type="checkbox" id="Engrais"/>
+					<label for="Engrais">Engrais</label>
+					<input type="checkbox" id="Pesticides"/>
+					<label for="Pesticides">Pesticides</label>
+					<input type="checkbox" id="Peintures"/>
+					<label for="Peintures">Peintures</label>
                 </div>
+				</div>
+				
+				
+                
+                
             </div>
+			
+			<div class="input-group input-group-icon">
+                <input type="text" placeholder="Autres"/>
+                <div class="input-icon"><i class="fa fa-autre"></i></div>
+                </div>
+				
+				
+                <div class="input-valider">
+                <button id="validerr"><input type="submit" value="Valider" style="left:0; right:0; background-color: #7ed321; border: 1px solid green; color: white;  padding: 12px 217px;  cursor: pointer;  width: 100%; 
+  display:block" /></button>
+                
+                </div>
+            
             </form>
         </div>
     </body>
